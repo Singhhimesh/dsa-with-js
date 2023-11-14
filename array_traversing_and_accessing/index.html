@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing traversing and accessing element</title>
+</head>
+<body>
+    <h1>Array traversing and accessing element</h1>
+
+    <input type="text" id="element"> <button onclick="getElement()">Save</button>
+    
+    <span id="res"></span>
+    
+    <span id="error"></span>
+
+    <script>
+        function getElement() {8
+            const array = [ 1, 2, 3, 4, 5, 6 ];
+
+            let element = parseInt(document.getElementById("element").value);
+
+            for (let index = 0; index < array.length; index++) {
+                const element = array[index];
+                console.log(element);
+            }
+
+            if (element && element < array.length) {
+                document.getElementById("res").innerText = array[element];
+                document.getElementById("error").innerText = "";
+            } else {
+                document.getElementById("res").innerText = "";
+                document.getElementById("error").innerText = "Please enter valid data or index";
+            }
+        }
+
+    </script>
+</body>
+</html>

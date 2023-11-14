@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert a new array element</title>
+</head>
+
+<body>
+    <h1>Insert a new array element</h1>
+    <script>
+        let array = [ 60, 30, 10, 67, 40 ];
+        let newElement = 111;
+        let position = 2;
+
+        // for (let index = array.length; index >= position; index--) {
+        //     array[index + 1] = array[index];
+
+        //     if (position == index) {
+        //         array[index] = newElement;
+        //     }
+        // }
+        console.log(array);
+        for (let index = array.length - 1; index >= 0; index--) {
+            if (index >= position) {
+                array[index + 1] = array[index];
+
+                if (index == position) {
+                    array[index] = newElement;
+                }
+            }
+        }
+
+        console.log(array);
+    </script>
+</body>
+
+</html>
