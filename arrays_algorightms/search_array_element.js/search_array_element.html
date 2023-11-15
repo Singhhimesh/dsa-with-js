@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search array element</title>
+</head>
+<body>
+    <script>
+        let array = [14, 25, 74, 85, 96];
+        let findElement = 74;
+
+        const findArrayElement = (array, findElement) => {
+            const parsedElement = parseInt(findElement);
+            
+            for (let index = 0; index < array.length; index++) {
+                if (array[index] === parsedElement) {
+                    return `array element ${findElement} finded at index array[${index}]`;
+                }
+            }
+
+            return `No data found`;
+        }
+
+        const data = findArrayElement(array, findElement);
+        console.log(data);
+    </script>
+</body>
+</html>
